@@ -111,15 +111,17 @@ ul {
   background: transparent;
 }
 .side-menu:checked ~ .hamburger .hamburger-line::before {
+  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   top: 0;
 }
 .side-menu:checked ~ .hamburger .hamburger-line::after {
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   top: 0;
 }
 
-/* ----- Responsiveness ----- */
+/* ----- Responsiveness for hamburger menu ----- */
 
 @media (min-width: 768px) {
   .nav {
@@ -127,6 +129,8 @@ ul {
     top: 0;
     position: relative;
     float: right;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     background-color: transparent;
   }
@@ -144,18 +148,6 @@ ul {
 }
 
 /* ------- HEADINGS ------- */
-
-.heading-1 {
-  position: static;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  font-family: basic-sans, sans-serif;
-  color: #262a4f;
-  font-size: 72px;
-  line-height: 80px;
-  font-weight: 700;
-  text-transform: none;
-}
 
 .main-heading-2 {
   margin-top: 10px;
@@ -213,12 +205,65 @@ ul {
   background-size: cover;
 }
 
-.section-white {
+.project-section {
   display: block;
-  min-height: 0;
-  padding-left: 0;
+  min-height: 0px;
+  padding-left: 0px;
   clear: none;
   text-align: left;
+}
+
+.project-container-left {
+  position: static;
+  display: flex;
+  width: 80%;
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  align-self: center;
+  order: -1;
+}
+
+.project-image-container {
+  display: flex;
+  width: 660px;
+  margin-top: 100px;
+  margin-right: auto;
+  justify-content: space-between;
+}
+
+.image-case-study {
+  margin-right: 0px;
+  flex: 1;
+  transition: -webkit-transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.image-case-study:hover {
+  -webkit-transform: translate(0px, -24px);
+  transform: translate(0px, -24px);
+}
+
+.project-container-text-right {
+  display: flex;
+  width: 450px;
+  height: auto;
+  margin-top: 100px;
+  margin-left: 30px;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.div-block-case-study {
+  margin-left: 0px;
+  align-self: center;
+  flex: 1;
+  text-align: center;
 }
 
 .project-heading {
@@ -238,45 +283,6 @@ ul {
   text-align: center;
 }
 
-.project-image-container {
-  width: 450px;
-  margin: 100px auto 0;
-  align-self: center;
-}
-
-.image-case-study {
-  display: block;
-  overflow: visible;
-  margin: 0 auto;
-  flex: 1;
-}
-
-.div-block-case-study {
-  margin-left: 0px;
-  align-self: center;
-  flex: 1;
-  text-align: center;
-}
-
-.project-info-container-right {
-  flex-direction: column;
-}
-
-.button-label {
-  margin-right: 4px;
-  margin-bottom: 8px;
-  margin-left: 4px;
-  padding: 4px 16px;
-  border-radius: 20px;
-  background-color: #f1f2f6;
-  transition-property: none;
-  font-family: "sofia-pro", sans-serif;
-  color: #898ea2;
-  font-size: 14px;
-  line-height: 20px;
-  cursor: default;
-}
-
 .link-to-project {
   display: block;
   margin: 52px auto 0;
@@ -294,6 +300,56 @@ ul {
 .link-to-project:hover {
   color: #5aded1;
   letter-spacing: 1px;
+}
+
+.project-section {
+  display: block;
+  min-height: 0px;
+  padding-left: 0px;
+  clear: none;
+  text-align: left;
+}
+
+.project-container-right {
+  display: flex;
+  width: 80%;
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.project-image-container-right {
+  width: 660px;
+  margin-top: 100px;
+  margin-left: 30px;
+}
+
+.project-container {
+  width: 450px;
+  margin-top: 100px;
+  margin-right: 0px;
+  align-self: center;
+}
+
+.button-label {
+  margin-right: 4px;
+  margin-bottom: 8px;
+  margin-left: 4px;
+  padding: 4px 16px;
+  border-radius: 20px;
+  background-color: #f1f2f6;
+  transition-property: none;
+  font-family: "sofia-pro", sans-serif;
+  color: #898ea2;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: default;
+}
+
+.button-label:hover {
+  color: #898ea2;
 }
 
 /* ------- FOOTER ------- */
@@ -332,4 +388,69 @@ ul {
 .social-media-icon {
   margin-right: 20px;
   margin-left: 20px;
+}
+
+/*---  Media Queries ---*/
+
+@media screen and (max-width: 991px) {
+  .project-section {
+    display: flex;
+    flex-direction: column;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .project-container-left {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .project-image-container {
+    margin-top: 80px;
+    margin-left: 20px;
+  }
+
+  .image-case-study {
+    display: block;
+    overflow: visible;
+    margin: 0 auto;
+    flex: 1;
+  }
+
+  .project-container-right {
+    height: auto;
+    margin-top: 80px;
+    margin-left: 20px;
+  }
+
+  .div-block-case-study {
+    margin-left: 0px;
+    align-self: center;
+    flex: 1;
+    text-align: center;
+  }
+
+  .project-container {
+    margin-top: 100px;
+  }
+
+  .project-description {
+    margin-bottom: 16px;
+  }
+
+  .social-media-icon {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .project-container-right {
+    height: auto;
+    margin-top: 80px;
+    margin-left: 20px;
+  }
+
+  .project-container {
+    margin-top: 100px;
+  }
 }
