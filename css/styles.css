@@ -306,7 +306,7 @@ ul {
   padding: 80px 50px;
   justify-content: space-between;
   align-items: center;
-  background-color: #f1f2f6;
+  background-color: var(--white);
 }
 
 .footer-links {
