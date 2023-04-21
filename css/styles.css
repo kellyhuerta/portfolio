@@ -468,27 +468,6 @@ ul {
     letter-spacing: 1px;
   }
 
-  /* .heading-1-project {
-    font-size: 54px;
-    line-height: 40px;
-  }
-
-  .heading-2-project {
-    font-size: 36px;
-    line-height: 36px;
-  }
-
-  .heading-3-project {
-    font-size: 28px;
-    line-height: 28px;
-  }
-
-  .heading-4-project {
-    font-size: 20px;
-    line-height: 20px;
-  }
-*/
-
   .social-media-icon {
     margin-right: 20px;
     margin-left: 20px;
@@ -564,57 +543,5 @@ ul {
     width: 100%;
     margin-top: 20px;
     margin-right: 0px;
-  }
-}
-
-@media screen and (max-width: 479px) {
-  .main-heading-1 {
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 30px;
-    margin-top: 30px;
-    font-size: 32px;
-    line-height: 32px;
-  }
-
-  .main-heading-2 {
-    width: 90%;
-    margin: 4px auto;
-    font-size: 32px;
-    line-height: 32px;
-  }
-
-  .main-heading-3 {
-    margin-right: auto;
-    margin-left: auto;
-    font-size: 32px;
-    line-height: 32px;
-  }
-
-  .sub-heading {
-    font-weight: 900;
-  }
-
-  .project-image-container {
-    margin-top: 60px;
-  }
-
-  .project-heading {
-    margin-bottom: 12px;
-    font-size: 28px;
-    line-height: 28px;
-  }
-
-  .social-media-icon {
-    margin-left: 10px;
-  }
-
-  .project-description {
-    margin-bottom: 16px;
-  }
-
-  .project-image-container-right {
-    margin-top: 60px;
   }
 }
