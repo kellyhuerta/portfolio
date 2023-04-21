@@ -211,7 +211,7 @@ ul {
 }
 
 .container-1140-landing {
-  max-width: 1140px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -312,13 +312,18 @@ ul {
 }
 
 .project-container-right {
+  position: static;
   display: flex;
   width: 80%;
   max-width: 960px;
   margin-right: auto;
   margin-left: auto;
   flex-direction: row-reverse;
-  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  align-self: center;
+  order: -1;
 }
 
 .project-image-container-right {
