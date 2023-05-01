@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KH - UX/UI Design Portfolio</title>
+    <link href="/css/contact.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <!-- Logo -->
+      <a href="index.html" class="logo">KH</a>
+      <!-- Hamburger menu toggle -->
+      <input class="side-menu" type="checkbox" id="side-menu" />
+      <label class="hamburger" for="side-menu"
+        ><span class="hamburger-line"></span
+      ></label>
+      <!-- Menu -->
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Header-->
+    <main>
+      <div>
+        <div class="portfolio-block contact">
+          <div class="container">
+            <div class="heading">
+              <h2 class="heading">Contact</h2>
+              <div class="body-1-project">
+                If you’d like to know more or have a project
+                <br />
+                you’d like to discuss, don’t hesitate to reach out.
+              </div>
+            </div>
+            <!-- Contact Form -->
+            <form
+              class="contact-form"
+              data-bss-recipient="c4ab7a03c7a246595634b610eb012005">
+              <div class="mb-3">
+                <label class="form-label" for="name">Name</label>
+                <input
+                  class="form-control item"
+                  type="text"
+                  id="name"
+                  required="" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="email">Email</label>
+                <input
+                  class="form-control item"
+                  type="email"
+                  id="email"
+                  required=""
+                  autocomplete="on"
+                  inputmode="email" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="subject">Subject</label>
+                <input class="form-control item" type="text" id="subject" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="phone1">Phone</label>
+                <div class="phone-inputs">
+                  <input
+                    class="form-control item"
+                    type="tel"
+                    id="phone1"
+                    inputmode="tel" />
+                  <input
+                    class="form-control item"
+                    type="tel"
+                    id="phone2"
+                    inputmode="tel" />
+                  <input
+                    class="form-control item"
+                    type="tel"
+                    id="phone3"
+                    inputmode="tel" />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="message">Message</label>
+                <textarea
+                  class="form-control item"
+                  id="message"
+                  required=""
+                  spellcheck="true"
+                  wrap="soft"></textarea>
+              </div>
+              <div class="mb-3">
+                <button
+                  class="btn btn-primary btn-lg d-block w-100"
+                  type="submit">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- The footer will include social media icons with external links-->
+    <div class="footer-wrap">
+      <div class="footer-links">
+        <a
+          href="https://www.linkedin.com/in/kellyhuerta"
+          target="_blank"
+          class="w-inline-block">
+          <img
+            src="images/icon-linkedin.png"
+            width="36"
+            height="36"
+            alt=""
+            class="social-media-icon" />
+        </a>
+        <a
+          href="https://github.com/kellyhuerta"
+          target="_blank"
+          class="w-inline-block">
+          <img
+            src="images/icon-github.png"
+            width="36"
+            height="36"
+            alt=""
+            class="social-media-icon" />
+        </a>
+      </div>
+    </div>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
