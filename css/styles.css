@@ -26,6 +26,11 @@ ul {
   list-style: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 /* Header */
 
 /* -- Header -- */
@@ -327,9 +332,10 @@ ul {
 }
 
 .project-image-container-right {
-  width: 660px;
+  display: flex;
   margin-top: 100px;
-  margin-left: 30px;
+  justify-content: space-between;
+  max-width: 100%;
 }
 
 .project-container-text {
@@ -358,6 +364,9 @@ ul {
   color: #898ea2;
 }
 
+.w-button {
+  display: inline-block;
+}
 /* ------- FOOTER ------- */
 
 .footer-wrap {
